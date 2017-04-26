@@ -121,7 +121,7 @@ sc::0
 
 # Credits
 ---
-This library is using (jQuery.fbMessenger)[https://github.com/digitalbreed/jquery.fbmessenger] of Matthias Gall
+This library is using [jQuery.fbMessenger](https://github.com/digitalbreed/jquery.fbmessenger) of Matthias Gall
 
 # Legal
 ---
