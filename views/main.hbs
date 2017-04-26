@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bot Preview</title>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.fbmessenger.min.js"></script>
+  <script type="text/javascript" src="js/frame.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/jquery.fbmessenger.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="css/frame.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 block">
+
+        <div class="row block__title">
+          <div class="col-md-8">
+            <select class="block__flows" id="flow" onChange="changeFlow()">
+              {{#each flowList}}
+              <option value="{{this}}" {{{selected this ../name}}}>{{this}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="col-md-4">
+            <button id="play" data-state="stopped" class="btn btn-primary play" onClick="play()">Play</button>
+          </div>
+        </div>
+
+        <div class="row block__steps">
+          {{#each flow}}
+          <div class="row">
+            <div class="col-md-12">{{{stepList this}}}</div>
+          </div>
+          {{/each}}
+        </div>
+
+      </div>
+      <div class="col-lg-9">
+        <div>
+          <div class="content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(() => {
+      const userConfig = {{{config}}};
+      const botConfig = {
+        endCallback: endFlow,
+        stepCallback: stepFlow
+      };
+      const config = Object.assign(userConfig, botConfig);
+      $('.content')
+        .fbMessenger(config)
+        .fbMessenger('start', { delay: 1000 })
+        {{#each flow}}
+            {{{step this}}}
+        {{/each}}
+      });
+  </script>
+</body>
+</html>

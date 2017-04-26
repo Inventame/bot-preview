@@ -1,0 +1,37 @@
+user::"Hello, this is a message from  a user"
+...
+bot::"Hello there, this is a message from bot"
+bot::"I will show you a menu, select one"
+['opcion1', 'opcion2', 'opcion3', 'more']
+qr::3
+...
+bot::"Pick one"
+['opcion4', 'opcion5', 'opcion6']
+qr::2
+...
+bot::"Good option, i agree with you ;)"
+...
+"Sometime we want to show a button"::['like this one', 'Or this one']
+bt::0
+...
+bot::"Do you want to play with cards?"
+['Yes', 'No']
+qr::0
+...
+bot::"Ok Cool!"
+!#
+imageUrl::https://i.ytimg.com/vi/56ucT_Hw4bg/hqdefault.jpg
+title::This is a card title
+subtitle::this is a card sub title
+buttons::option one|option two
+>
+imageUrl::https://i.ytimg.com/vi/56ucT_Hw4bg/hqdefault.jpg
+title::This card also have a kitty
+subtitle::Did you see it?
+buttons::Yes, i see it|Nop
+#!
+scroll::1
+sc::0
+...
+bot::"Cool"
+bot::"Bye!"

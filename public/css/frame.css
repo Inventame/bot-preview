@@ -1,0 +1,72 @@
+
+body {
+  background-color: #fcfcfc;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+h1 { text-transform: capitalize; }
+.block {
+  border-right: 1px solid #DDDDDD;
+  width: 300px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.block__title {
+  border-top: 2px solid #DDDDDD;
+  width: 300px;
+  bottom: 0px;
+  position: fixed;
+  z-index: 1000;
+  background-color: #fcfcfc;
+}
+.block__title > div { padding: 0px; }
+.block__steps {
+  margin-bottom: 40px;
+}
+.block__flows {
+  width: 98%;
+  margin-top: 6px;
+}
+.step {
+  border: 1px solid #DDDDDD;
+  background-color: #ffffff;
+  margin: 6px;
+  border-radius: 10px 10px 0px 0px;
+}
+.step.active {
+  box-shadow: -1px 0px 19px -2px rgba(18,133,0,0.96);
+}
+.step__title {
+  padding: 6px;
+  color: #A1A1A1;
+}
+.step__content {
+  padding: 6px;
+  background-color: #f4f4f4;
+}
+.play {
+  width: 100%;
+  outline: none;
+}
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.container > .row {
+  height: 100%;
+}
+.content {
+  width: 375px;
+  height: 667px;
+  margin: 40px auto;
+  position: absolute;
+  display: inline-block;
+  border: 1px solid #DDDDDD;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}

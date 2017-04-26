@@ -1,0 +1,11 @@
+{
+    "loop": false,
+    "likes": "20K",
+    "botLogoUrl": "./images/bot.png",
+    "botBannerUrl": "./images/background.png",
+    "botName": "NameBot",
+    "botCategory": "Marca",
+    "botWelcomeMessage": "Hola Usuario, Bienvenido!",
+    "displayedCarrier": "Vomistar",
+    "displayedTime": "10:01"
+}
