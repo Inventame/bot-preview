@@ -107,6 +107,7 @@ const helpers = {
       const data = step.split('::');
       var user = 'bot';
       var text = '';
+      var type = '';
 
       if (isClosingCard) {
         text = 'Card with options';
